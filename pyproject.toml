@@ -1,6 +1,6 @@
 [project]
 name = "illufly-upload"
-version = "0.1.0"
+version = "0.1.1"
 description = "文件上传存储服务"
 authors = [
     {name = "arcstep",email = "43801@qq.com"}
@@ -20,9 +20,6 @@ dependencies = [
     "click>=8.0.0",
     "anyio>=3.7.0"
 ]
-
-[tool.poetry.group.dev.dependencies]
-voidring = {path = "/Users/xuehongwei/codeup/voidring", develop = true}
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
