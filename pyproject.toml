@@ -1,16 +1,34 @@
 [project]
 name = "illufly-upload"
 version = "0.1.0"
-description = ""
+description = "文件上传存储服务"
 authors = [
     {name = "arcstep",email = "43801@qq.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "fastapi>=0.68.0",
+    "uvicorn>=0.15.0",
+    "python-multipart>=0.0.5",
+    "pydantic>=1.8.2",
+    "python-dotenv>=0.19.0",
+    "loguru>=0.5.3",
+    "aiofiles>=0.8.0",
+    "aiohttp (>=3.11.16,<4.0.0)",
 ]
 
+[tool.poetry.group.dev.dependencies]
+voidring = {path = "/Users/xuehongwei/codeup/voidring", develop = true}
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+packages = [
+    { include = "illufly_upload", from = "src" }
+]
+
+[project.scripts]
+illufly-upload = "illufly_upload.__main__:main"
