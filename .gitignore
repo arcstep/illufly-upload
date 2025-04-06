@@ -7,3 +7,5 @@ build/
 .idea/
 .pytest_cache/
 tests/upload_home/
+storage/
+

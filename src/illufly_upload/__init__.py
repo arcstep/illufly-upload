@@ -1,12 +1,17 @@
-from .upload import UploadService, FileStatus, create_upload_endpoints
-from .endpoints import mount_upload_service
-from .client import UploadClient, SyncUploadClient
+from .upload import UploadService, FileStatus
+from .endpoints import setup_upload_service, mount_upload_service, mount_upload_service_stdio
+from .mcp_client import UploadMcpClient as UploadClient, SyncUploadMcpClient as SyncUploadClient
+from .mcp_server import create_mcp_server
 
 __all__ = [
     'UploadService',
     'FileStatus',
-    'create_upload_endpoints',
+    'setup_upload_service',
     'mount_upload_service',
+    'mount_upload_service_stdio',
     'UploadClient',
-    'SyncUploadClient'
+    'SyncUploadClient',
+    'create_mcp_server',
+    'UploadMcpClient',
+    'SyncUploadMcpClient'
 ]

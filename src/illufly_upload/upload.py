@@ -51,7 +51,13 @@ class UploadService:
         
         self.max_file_size = max_file_size
         self.max_total_size_per_user = max_total_size_per_user
-        self.allowed_extensions = allowed_extensions or ['.pdf', '.doc', '.docx', '.txt', '.jpg', '.jpeg', '.png', '.csv', '.xlsx', '.xls']
+        self.allowed_extensions = allowed_extensions or [
+            '.ppt', '.pptx',
+            '.rmd', '.md', '.mdx', 'markdown',
+            '.pdf', '.doc', '.docx', '.txt',
+            '.jpg', '.jpeg', '.png',
+            '.csv', '.xlsx', '.xls'
+        ]
         
         # 文件MIME类型映射
         self._mime_types = {
